@@ -1,11 +1,42 @@
+---
+const pageTitle = "About";
+
+const identity = {
+    name: "Clayton",
+    age: 26,
+    location: "Buffalo, NY",
+    occupation: "Software Engineer",
+    hobbies: ["Film Photography", "Programming", "Video Game Development", "Reading", "Biking", "Gardening", "Cooking"]
+}
+
+const skills = ["Full Stack Web Development","JavaScript", "React", "Python", "Java", "C#"]
+
+const happy = true;
+const finished = false;
+const goal = 3;
+---
+
 <html lang="en">
 	<head>
-		<title>About</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog">Blog</a>
+
         <p>I'm Clay</p>
+
+        <p>My programming skills are in:</p>
+        <ul>
+            {skills.map(skill => <li>{skill}</li>)}
+        </ul>
+
+        {happy && <p>I am happy to be learning Astro!</p>}
+
+        {finished && <p>I finished this tutorial!</p>}
+
+        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
 	</body>
 </html>
