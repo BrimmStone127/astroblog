@@ -1,14 +1,15 @@
 ---
 // Import the images from your assets folder
 const images = [
-  '/assets/images/forest-background1.png',
-  '/assets/images/horizon1.png',
-  '/assets/images/moon1.png',
-  '/assets/images/sky_day_night-Sheet.png',
-  '/assets/images/sky1.png',
-  '/assets/images/sun1.png',
+    "/assets/images/forest-background1.png",
+    "/assets/images/horizon1.png",
+    "/assets/images/moon1.png",
+    "/assets/images/sky_day_night-Sheet.png",
+    "/assets/images/sky1.png",
+    "/assets/images/sun1.png",
 ];
 ---
+
 <html lang="en">
     <head>
         <title>Gallery</title>
@@ -20,8 +21,9 @@ const images = [
                 justify-content: center;
             }
             .gallery img {
-                max-width: 100%;
+                width: auto;
                 height: auto;
+                object-fit: contain;
                 margin: 10px;
             }
         </style>
@@ -32,9 +34,7 @@ const images = [
         <a href="/blog">Blog</a>
         <p>Gallery</p>
         <div class="gallery">
-            {images.map(image => (
-                <img src={image} alt="" loading="lazy" />
-            ))}
+            {images.map((image) => <img src={image} alt="" loading="lazy" />)}
         </div>
     </body>
 </html>
