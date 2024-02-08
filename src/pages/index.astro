@@ -1,7 +1,7 @@
 ---
-import Navigation from "../components/Navigation.astro";
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -13,12 +13,10 @@ import Footer from "../components/Footer.astro";
 		<title>Astro</title>
 	</head>
 	<body>
-		<Navigation />
+		<Header/>
 
 		<h1>Clay's Workshop</h1>
 		<Footer />
-		<script>
-			import "..\scripts\menus.js";
-		</script>
+		<script src="../scripts/menus.js"></script>
 	</body>
 </html>
