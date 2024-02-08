@@ -1,9 +1,7 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "About";
+
 
 const identity = {
     name: "Clayton",
@@ -20,30 +18,18 @@ const finished = false;
 const goal = 3;
 ---
 
-<html lang="en">
-	<head>
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-        <Navigation/>
 
-        <p>I'm Clay</p>
+<BaseLayout pageTitle={pageTitle}>
+    <p>I'm Clay</p>
 
-        <p>My programming skills are in:</p>
-        <ul>
-            {skills.map(skill => <li>{skill}</li>)} 
-        </ul>
+    <p>My programming skills are in:</p>
+    <ul>
+        {skills.map(skill => <li>{skill}</li>)} 
+    </ul>
 
-        {happy && <p>I am happy to be learning Astro!</p>}
+    {happy && <p>I am happy to be learning Astro!</p>}
 
-        {finished && <p>I finished this tutorial!</p>}
+    {finished && <p>I finished this tutorial!</p>}
 
-        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
-        <Footer/>
-        
-        <script>
-            import "../scripts/menu.js";
-          </script>
-	</body>
-</html>
+    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+</BaseLayout>

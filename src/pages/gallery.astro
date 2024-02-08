@@ -1,6 +1,6 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Gallery";
 
 // Import the images from your assets folder
 const images = [
@@ -13,30 +13,23 @@ const images = [
 ];
 ---
 
-<html lang="en">
-    <head>
-        <title>Gallery</title>
-        <style>
-            /* Add some styles to handle the image display */
-            .gallery {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .gallery img {
-                width: auto;
-                height: auto;
-                object-fit: contain;
-                margin: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <Navigation />
-
-        <p>Gallery</p>
-        <div class="gallery">
-            {images.map((image) => <img src={image} alt="" loading="lazy" />)}
-        </div>
-    </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <style>
+        /* Add some styles to handle the image display */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            margin: 10px;
+        }
+    </style>
+    <div class="gallery">
+        {images.map((image) => <img src={image} alt="" loading="lazy" />)}
+    </div>
+</BaseLayout>
+```
