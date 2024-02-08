@@ -1,0 +1,17 @@
+---
+const platform = "github";
+const username = "BrimmStone127";
+import Social from "./Social.astro";
+---
+
+
+<footer>
+    <p>
+        Learn more about my projects on <a
+            href={`https://www.${platform}.com/${username}`}>{platform}</a
+        >!
+    </p>
+    <!-- <Social platform="twitter" username="BrimmStone127" />-->
+    <Social platform="github" username="BrimmStone127" />
+    <!-- <Social platform="youtube" username="astrodotbuild" />-->
+</footer>

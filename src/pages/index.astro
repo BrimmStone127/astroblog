@@ -1,5 +1,7 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -11,10 +13,9 @@ import '../styles/global.css';
 		<title>Astro</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog">Blog</a>
-		<a href="/gallery">Gallery</a>
+		<Navigation />
+
 		<h1>Clay's Workshop</h1>
 	</body>
+	<Footer/>
 </html>
