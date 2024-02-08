@@ -2,15 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Gallery";
 
-// Import the images from your assets folder
-const images = [
-    "/assets/images/forest-background1.png",
-    "/assets/images/horizon1.png",
-    "/assets/images/moon1.png",
-    "/assets/images/sky_day_night-Sheet.png",
-    "/assets/images/sky1.png",
-    "/assets/images/sun1.png",
-];
+// Generate an array of image paths
+const images = Array.from({ length: 30 }, (_, i) => `../assets/images/${i + 1}.jpg`);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -22,7 +15,7 @@ const images = [
             justify-content: center;
         }
         .gallery img {
-            width: auto;
+            width: 50%;
             height: auto;
             object-fit: contain;
             margin: 10px;
@@ -32,4 +25,3 @@ const images = [
         {images.map((image) => <img src={image} alt="" loading="lazy" />)}
     </div>
 </BaseLayout>
-```
