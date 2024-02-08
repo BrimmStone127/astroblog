@@ -1,0 +1,40 @@
+---
+// Import the images from your assets folder
+const images = [
+  '/assets/images/forest-background1.png',
+  '/assets/images/horizon1.png',
+  '/assets/images/moon1.png',
+  '/assets/images/sky_day_night-Sheet.png',
+  '/assets/images/sky1.png',
+  '/assets/images/sun1.png',
+];
+---
+<html lang="en">
+    <head>
+        <title>Gallery</title>
+        <style>
+            /* Add some styles to handle the image display */
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .gallery img {
+                max-width: 100%;
+                height: auto;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/blog">Blog</a>
+        <p>Gallery</p>
+        <div class="gallery">
+            {images.map(image => (
+                <img src={image} alt="" loading="lazy" />
+            ))}
+        </div>
+    </body>
+</html>
