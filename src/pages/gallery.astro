@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Gallery";
 
 // Generate an array of image paths
-const images = Array.from({ length: 30 }, (_, i) => `../assets/images/${i + 1}.jpg`);
+const images = Array.from({ length: 30 }, (_, i) => `src/assets/images/${i + 1}.jpg`);
 ---
 
 <BaseLayout pageTitle={pageTitle}>

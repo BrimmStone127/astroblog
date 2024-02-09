@@ -44,6 +44,12 @@ h1 {
     background-color: #ff9776;
 }
 
+.nav-links .current-page {
+    text-decoration: underline;
+    text-decoration-color: #ff9776; /* change this to the color you want */
+    background-color: unset;
+}
+
 .nav-links {
     width: 100%;
     top: 5rem;
