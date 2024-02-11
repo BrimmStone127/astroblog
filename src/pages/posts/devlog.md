@@ -12,6 +12,50 @@ tags: ["programming", "blog", "web dev"]
 
 <!-- git log --pretty=format:"%h - %an, %ad : %s" --date=short > "C:\Users\clayb\Dev\astro-blog\src\pages\posts\gitlog.txt"-->
 
+### Project Structure
+
+```plaintext
+.astro/
+.gitignore
+.vscode/
+    extensions.json
+    launch.json
+assets/
+    images/
+        pixel art/
+astro.config.mjs
+package.json
+public/
+README.md
+src/
+    assets/
+        images/
+    components/
+        BlogPost.astro
+        Footer.astro
+        Greeting.jsx
+        Hamburger.astro
+        Header.astro
+        Navigation.astro
+        Social.astro
+        ThemeIcon.astro
+    env.d.ts
+    layouts/
+        BaseLayout.astro
+        MarkdownPostLayout.astro
+    pages/
+        about.astro
+        blog.astro
+        gallery.astro
+        index.astro
+        posts/
+        tags/
+    scripts/
+        menus.js
+    styles/
+tsconfig.json
+```
+
 ### Git Log
 
 ```plaintext
