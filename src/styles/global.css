@@ -1,15 +1,59 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 html {
-    background-image: #f1f5f9;
     font-family: sans-serif;
+    background: linear-gradient(-45deg, #d13b0d, #e70c60, #058cbd, #18a52e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    scrollbar-width: none; /* For Firefox */
+}
+
+html::-webkit-scrollbar {
+    width: 0; /* For Chrome, Safari, and Opera */
 }
 
 html.dark {
-    background-color: #0d0950;
-    color: #fff;
+    background: linear-gradient(-45deg, #340c00, #360015, #002837, #003428);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.dark .main-content{
+    background-color: rgb(7, 4, 12);
+    color:#f1f5f9
+}
+
+.dark header, footer{
+    color: #f1f5f9;
 }
 
 .dark .nav-links a {
-    color: #fff;
+    color: #e70c60;
+}
+
+header, footer {
+    width: 100%;
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 1rem;
+    line-height: 1.5;
+    font-family: sans-serif;
+    background: transparent;
+}
+
+footer {
+    line-height: 1;
+    height: 4rem;
 }
 
 body {
@@ -30,25 +74,16 @@ body {
 .main-content {
     flex: 1;
     width: 100%;
-    max-width: 2560px; /* or any other value that suits your design */
+    max-width: 3440px; /* or any other value that suits your design */
     margin: 0 auto;
     padding: 1.5rem;
+    background-color: #f1f5f9;
 }
 
 .main-content h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
-
-header, footer {
-    width: 100%;
-    max-width: 80ch;
-    margin: 0 auto;
-    padding: 1rem;
-    line-height: 1.5;
 }
 
 * {
@@ -62,7 +97,7 @@ header, footer {
     min-height: 100vh;
     width: 100%;
     overflow: auto;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .gallery {
@@ -112,7 +147,7 @@ h1 {
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #ff9776;
+    background-color: #ff4309;
     display: none;
     margin: 0;
 }
@@ -129,7 +164,8 @@ h1 {
 
 .nav-links a:hover,
 .nav-links a:focus {
-    background-color: #ff9776;
+   font-weight: bold;
+   text-decoration: underline;
 }
 
 .expanded {
@@ -155,3 +191,4 @@ h1 {
     }
 
 }
+
