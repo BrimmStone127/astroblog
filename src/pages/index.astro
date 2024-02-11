@@ -1,9 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
-const pageTitle = "Clay's Workshop";
+const pageTitle = "hello";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>welcome to the workshop</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <div class="text-content">
+    <h2>welcome to the workshop</h2>
+    <p></p>
+    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari", "Hi", "Hello"]} />
+  </div>
+ 
 </BaseLayout>

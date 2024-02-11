@@ -5,6 +5,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
+    <div class="text-content">
     <p>{frontmatter.pubDate.slice(0, 10)}</p>
     <p transition:animate={fade({ duration: '2s' })}><em>{frontmatter.description}</em></p>
     <p>Written by: {frontmatter.author}</p>
@@ -14,27 +15,30 @@ const { frontmatter } = Astro.props;
         {frontmatter.tags.map((tag) => (
           <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
         ))}
-      </div>
+    </div>
 
-    
-    <slot />
+   
+        <slot />
+    </div>
 </BaseLayout>
 <style>
+    @import "../styles/global.css";
+
     a {
-      color: #00539F;
+        color: #00539F;
     }
-  
+
     .tags {
-      display: flex;
-      flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
     }
-  
+
     .tag {
-      margin: 0.25em;
-      border: dotted 1px #a1a1a1;
-      border-radius: .5em;
-      padding: .5em 1em;
-      font-size: 1.15em;
-      background-color: #F8FCFD;
+        margin: 0.25em;
+        border: dotted 1px #a1a1a1;
+        border-radius: .5em;
+        padding: .5em 1em;
+        font-size: 1.15em;
+        background-color: #F8FCFD;
     }
-  </style>
+</style>

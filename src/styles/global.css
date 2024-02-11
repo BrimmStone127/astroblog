@@ -1,5 +1,5 @@
 html {
-    background-color: #f1f5f9;
+    background-image: #f1f5f9;
     font-family: sans-serif;
 }
 
@@ -20,6 +20,13 @@ body {
     min-height: 100vh;
 }
 
+.text-content {
+    width: 100%;
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
 .main-content {
     flex: 1;
     width: 100%;
@@ -27,6 +34,14 @@ body {
     margin: 0 auto;
     padding: 1.5rem;
 }
+
+.main-content h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 header, footer {
     width: 100%;
