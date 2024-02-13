@@ -197,6 +197,27 @@ nav {
     display: unset;
 }
 
+/* Change the background color of the lightbox */
+.fancybox-bg {
+    background: #000;
+  }
+  
+  /* Change the color of the caption text */
+  .fancybox-caption {
+    color: #fff;
+  }
+  
+  /* Change the color and size of the navigation arrows */
+  .fancybox-navigation .fancybox-button {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Change the color of the close button */
+  .fancybox-close-small {
+    color: #fff;
+  }
 
 @media screen and (min-width: 636px) {
     .nav-links {

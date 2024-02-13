@@ -12,7 +12,9 @@
   "dependencies": {
     "@astrojs/preact": "^3.1.0",
     "@astrojs/rss": "^4.0.5",
+    "@fancyapps/ui": "^5.0.33",
     "astro": "^4.3.5",
-    "preact": "^10.19.4"
+    "preact": "^10.19.4",
+    "simple-lightbox": "^2.1.0"
   }
 }

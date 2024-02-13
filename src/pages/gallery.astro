@@ -51,7 +51,11 @@ const images = [image1, image2, image3, image4, image5, image6, image7, image8, 
 <BaseLayout pageTitle={pageTitle}>
     <div class="gallery">
         {images.map((image, index) => (
-            <Image src={image} alt={`Image ${index + 1}`} />
+            <a href={String(image.src)} data-caption={`Image ${index + 1}`}>
+                <Image src={image} alt={`Image ${index + 1}`} />
+            </a>
         ))}
     </div>
 </BaseLayout>
+
+<script type="module" src="src\lightbox.js"></script>
