@@ -1,11 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
+import { Image } from 'astro:assets';
+import bigSpencer from '../assets/pixel-art/big-spencer.gif';
 const pageTitle = "hello";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <div class="text-content">
     <h2>welcome to the workshop</h2>
+    <p>This is my virtual pet opossum, Big Spencer</p>
+    <Image src={bigSpencer} alt={"Possum Gif"} />
     <p></p>
     <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari", "Hi", "Hello"]} />
   </div>
