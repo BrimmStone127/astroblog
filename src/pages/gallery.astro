@@ -110,7 +110,7 @@ const images: any = [
         images.map((image, index) => {
           if (String(image).endsWith(".mp4")) {
             return (
-              <a href={String(image)} data-caption={`Image ${index + 1}`}>
+              <a href={String(image.src)} data-caption={`Image ${index + 1}`}>
                 <video autoplay muted playsinline class="lazy">
                   <source data-src={String(image)} type="video/mp4" />
                 </video>
@@ -118,7 +118,7 @@ const images: any = [
             );
           } else {
             return (
-              <a href={String(image)} data-caption={`Image ${index + 1}`}>
+              <a href={String(image.src)} data-caption={`Image ${index + 1}`}>
                 <Image src={image} alt={`Image ${index + 1}`} loading="lazy"/>
               </a>
             );
@@ -127,6 +127,7 @@ const images: any = [
       }
     </div>
   </div>
+  
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
