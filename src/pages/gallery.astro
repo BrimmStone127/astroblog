@@ -54,84 +54,107 @@ const pageTitle = "Gallery";
 
 // Generate an array of imported images
 const images: any = [
-    vrbowling,
-    traversal,
-    mazegenerator,
-    typingdino,
-    bigspencer,
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10,
-    image11,
-    image12,
-    image13,
-    image14,
-    image15,
-    image16,
-    image17,
-    image18,
-    image19,
-    image20,
-    image21,
-    image22,
-    image23,
-    image24,
-    image25,
-    image26,
-    image27,
-    image28,
-    image29,
-    image30,
-    image31,
-    image32,
-    image33,
-    image34,
-    image35,
-    image36,
-    image37,
-    image38,
-    image39,
-    image40,
-    image41,
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image14,
+  image15,
+  image16,
+  image17,
+  image18,
+  image19,
+  image20,
+  image21,
+  image22,
+  image23,
+  image24,
+  image25,
+  image26,
+  image27,
+  image28,
+  image29,
+  image30,
+  image31,
+  image32,
+  image33,
+  image34,
+  image35,
+  image36,
+  image37,
+  image38,
+  image39,
+  image40,
+  image41,
+  bigspencer,
+  typingdino,
+  vrbowling,
+  traversal,
+  mazegenerator,
 ];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
+  <div class="gallery-container">
     <div class="gallery">
-        {
-            images.map((image, index) => {
-                if (String(image).endsWith(".mp4")) {
-                    return (
-                        <a
-                            href={String(image)}
-                            data-caption={`Image ${index + 1}`}
-                        >
-                            <video autoplay loop muted playsinline>
-                                <source src={String(image)} type="video/mp4" />
-                            </video>
-                        </a>
-                    );
-                } else {
-                    return (
-                        <a
-                            href={String(image)}
-                            data-caption={`Image ${index + 1}`}
-                        >
-                            <Image src={image} alt={`Image ${index + 1}`} />
-                        </a>
-                    );
-                }
-            })
-        }
-        ))
+      {
+        images.map((image, index) => {
+          if (String(image).endsWith(".mp4")) {
+            return (
+              <a href={String(image)} data-caption={`Image ${index + 1}`}>
+                <video autoplay muted playsinline class="lazy">
+                  <source data-src={String(image)} type="video/mp4" />
+                </video>
+              </a>
+            );
+          } else {
+            return (
+              <a href={String(image)} data-caption={`Image ${index + 1}`}>
+                <Image src={image} alt={`Image ${index + 1}`} loading="lazy"/>
+              </a>
+            );
+          }
+        })
+      }
     </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+      if ("IntersectionObserver" in window) {
+        var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(video: any) {
+            if (video.isIntersecting) {
+              for (var source in video.target.children) {
+                var videoSource = video.target.children[source];
+                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                  videoSource.src = videoSource.dataset.src;
+                }
+              }
+
+              video.target.load();
+              video.target.classList.remove("lazy");
+              lazyVideoObserver.unobserve(video.target);
+            }
+          });
+        });
+
+        lazyVideos.forEach(function(lazyVideo) {
+          lazyVideoObserver.observe(lazyVideo);
+        });
+      }
+    });
+  </script>
 </BaseLayout>
 
 <script type="module" src="src\lightbox.js"></script>
