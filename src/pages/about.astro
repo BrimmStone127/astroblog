@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "About";
+import typingdino from '../assets/pixel-art/typing-dino.gif';
+import { Image } from 'astro:assets';
+
+const pageTitle = " ";
 
 
 const identity = {
@@ -26,7 +29,7 @@ const goal = 3;
         <ul>
             {skills.map(skill => <li>{skill}</li>)} 
         </ul>
-        
+        <Image src={typingdino} alt="Pixel art of a dinosaur typing on a computer" />
     </div>
     
 </BaseLayout>
