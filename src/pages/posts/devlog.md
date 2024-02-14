@@ -12,6 +12,15 @@ tags: ["programming", "blog", "web dev"]
 
 <!-- git log --pretty=format:"%h - %an, %ad : %s" --date=short > "C:\Users\clayb\Dev\astro-blog\src\pages\posts\gitlog.txt"-->
 
+### ToDo
+- Add lightbox and slideshow to gallery
+- Expand blog tags to apply to gallery images
+- Move tag page to gallery?
+
+### Bug Log
+    - 2.14.2024 Blog and Gallery nav links display in different color when deployed
+    - 2.14.2024 Gallery image focus and blog posts have no back button
+
 ### Project Structure
 
 ```plaintext
@@ -59,6 +68,12 @@ tsconfig.json
 ### Git Log
 
 ```plaintext
+c663c98 - Brimmstone127, 2024-02-14 : Add typing dinosaur image to about and gallery pages
+47bdbf0 - Brimmstone127, 2024-02-13 : Add big-spencer.gif to gallery
+1f2a9ac - Brimmstone127, 2024-02-13 : Add content and image to about page
+e7f9723 - Brimmstone127, 2024-02-12 : Update dependencies and add simple-lightbox to gallery page
+6d57e40 - Brimmstone127, 2024-02-11 : Updated theme icons
+aa49424 - Brimmstone127, 2024-02-11 : Update tag pages layout and styling. Added Dev Log
 2f76217 - Brimmstone127, 2024-02-11 : Animated header and footer experiment
 4c70c17 - Brimmstone127, 2024-02-11 : Refactor layout and styles
 7f48d33 - Brimmstone127, 2024-02-09 : Refactor layout and styles***
@@ -85,5 +100,6 @@ eac1d2a - Brimmstone127, 2024-02-08 : Navigation fix
 2f19d4a - Brimmstone127, 2024-01-03 : init
 4224d54 - Brimmstone127, 2024-01-03 : Init
 bfe8d89 - Clayton Brimm, 2024-01-03 : Initial commit
+
 
 ```

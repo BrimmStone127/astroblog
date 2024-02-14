@@ -114,6 +114,13 @@ body {
     object-fit: contain;
 }
 
+.gallery video {
+    width: 100%; /* This will make the video take up the full width of its container */
+    height: auto; /* This will scale the height proportionally */
+    display: block; /* This will prevent inline white-space */
+    object-fit: cover; /* This will cover the entire content box, potentially cropping the video */
+}
+
 /* ... rest of your existing styles ... */
 
 
