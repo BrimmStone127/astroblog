@@ -17,3 +17,6 @@ Chronos - Time mangement module
 
 2024-01-19
 Day night animation - godot
+
+2024-02-25
+Godot 2D tutorial

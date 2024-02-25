@@ -13,20 +13,12 @@ tags: ["programming", "blog", "web dev"]
 
 ## Omnis sua
 
-Buffy
 James and the Giant Peach [eng]
 Emperors New Groove
 Sailor Moon
-10 Things I hate about you
-Clueless
-How to lose a guy in 10 days
 You've got mail
-17 dresses
-pretty in pink
-Heathers
 The last unicorn
 101 Dalmations
-Miss Congeniality
 Crazy Rich Asians
 Princess Bride
 Wizards - Bashki
