@@ -7,15 +7,28 @@ image:
     url: ../../assets/images/4.jpg
     alt: "Harbor .jpg"
 pubDate: 2024-02-11
+lastUpdate: 2024-03-13
 tags: ["programming", "blog", "web dev"]
 ---
 
 <!-- git log --pretty=format:"%h - %an, %ad : %s" --date=short > "C:\Users\clayb\Dev\astro-blog\src\pages\posts\gitlog.txt"-->
 
+<!-- James and the Giant Peach [eng]
+Emperors New Groove
+Sailor Moon
+You've got mail
+The last unicorn
+101 Dalmations
+Crazy Rich Asians
+Princess Bride
+Wizards - Bashki
+-->
+
 ### ToDo
 - Add lightbox and slideshow to gallery
 - Expand blog tags to apply to gallery images
 - Move tag page to gallery?
+- Fix load issues with Netlify app
 
 ### Bug Log
     - 2.14.2024 Blog and Gallery nav links display in different color when deployed
