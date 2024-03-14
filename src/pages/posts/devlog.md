@@ -81,6 +81,17 @@ tsconfig.json
 ### Git Log
 
 ```plaintext
+d4f8a9b - Brimmstone127, 2024-03-13 : added moon phase feature
+756e920 - Brimmstone127, 2024-03-13 : Deleted unnecessary blog posts, updated gamedev log
+40d9435 - Brimmstone127, 2024-03-13 : Updated gamedev-log
+db1a9d6 - Brimmstone127, 2024-02-25 : updated blogs
+59208af - Brimmstone127, 2024-02-17 : Added to gamedev log
+ee16088 - Brimmstone127, 2024-02-16 : Update gamedev-log.md with new content
+d4b74d0 - Brimmstone127, 2024-02-14 : Delete pixel art assets
+506ba34 - Brimmstone127, 2024-02-14 : Added blog post
+635d143 - Brimmstone127, 2024-02-14 : Update image source in gallery.astro
+d266173 - Brimmstone127, 2024-02-14 : Refactor gallery page and lazy load videos
+78cb04e - Brimmstone127, 2024-02-14 : Added ability to display .mp4 videos in gallery
 c663c98 - Brimmstone127, 2024-02-14 : Add typing dinosaur image to about and gallery pages
 47bdbf0 - Brimmstone127, 2024-02-13 : Add big-spencer.gif to gallery
 1f2a9ac - Brimmstone127, 2024-02-13 : Add content and image to about page
@@ -113,6 +124,4 @@ eac1d2a - Brimmstone127, 2024-02-08 : Navigation fix
 2f19d4a - Brimmstone127, 2024-01-03 : init
 4224d54 - Brimmstone127, 2024-01-03 : Init
 bfe8d89 - Clayton Brimm, 2024-01-03 : Initial commit
-
-
 ```
