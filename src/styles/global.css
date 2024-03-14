@@ -18,6 +18,14 @@ html {
     }
 }
 
+.moon-phase-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
 html::-webkit-scrollbar {
     width: 0; /* For Chrome, Safari, and Opera */
 }
