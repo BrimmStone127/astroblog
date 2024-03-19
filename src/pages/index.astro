@@ -3,41 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting";
 import { Image } from "astro:assets";
 import bigSpencer from "../assets/gifs/big-spencer.gif";
-import firstQuarterMoon from "../assets/moon/first-quarter-moon.png";
-import fullMoon from "../assets/moon/full-moon.png";
-import newMoon from "../assets/moon/new-moon.png";
-import thirdQuarterMoon from "../assets/moon/third-quarter-moon.png";
-import waningCrescentMoon from "../assets/moon/waning-crescent-moon.png";
-import waningGibbousMoon from "../assets/moon/waning-gibbous-moon.png";
-import waxingCrescentMoon from "../assets/moon/waxing-crescent-moon.png";
-import waxingGibbousMoon from "../assets/moon/waxing-gibbous-moon.png";
 
 const pageTitle = "Workshop";
-
-const moonPhases = [
-  { name: "New Moon", image: newMoon },
-  { name: "Waxing Crescent", image: waxingCrescentMoon },
-  { name: "First Quarter", image: firstQuarterMoon },
-  { name: "Waxing Gibbous", image: waxingGibbousMoon },
-  { name: "Full Moon", image: fullMoon },
-  { name: "Waning Gibbous", image: waningGibbousMoon },
-  { name: "Third Quarter", image: thirdQuarterMoon },
-  { name: "Waning Crescent", image: waningCrescentMoon },
-];
-
-const now = new Date();
-const newMoonDate = new Date(2000, 0, 6); // New moon of January 6, 2000
-const phase =
-  ((now.getTime() - newMoonDate.getTime()) / 1000 / 60 / 60 / 24) % 29.53;
-const currentMoon = moonPhases[Math.floor(phase / (29.53 / moonPhases.length))];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="text-content">
     <h1>Welcome To The Workshop</h1>
     <div class="moon-phase-container">
-      <h2>Tonight the moon will be a {currentMoon.name}!</h2>
-      <Image src={currentMoon.image} alt={currentMoon.name} />
+      <h2>Tonight the moon should be a <span id="moon-phase-name"></span>!</h2>
+      <img id="moon-phase-image" src="" alt="" />
     </div>
 
     <p>This is my virtual pet opossum, Spencer</p>
@@ -48,4 +23,5 @@ const currentMoon = moonPhases[Math.floor(phase / (29.53 / moonPhases.length))];
       messages={["Hej", "Hallo", "Hola", "Habari", "Hi", "Hello"]}
     />
   </div>
+  <script src="/scripts/moonPhase.js" onload="initMoonPhase()"></script>
 </BaseLayout>
