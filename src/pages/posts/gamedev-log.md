@@ -17,6 +17,19 @@ tags: ["programming", "blog", "game dev", "godot"]
 
 
 ## Dev Log
+
+---
+
+#### 2024-03-19
+##### King Minos
+Added a movable and zoomable camera.
+
+---
+
+#### 2024-03-18
+##### King Minos
+Setup a basic isometric tilemap using some simple assets. 
+
 ---
 
 #### 2024-03-07
