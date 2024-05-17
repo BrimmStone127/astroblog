@@ -59,9 +59,7 @@ Chronos - Time mangement module
 #### 2024-01-19
 Day night animation - godot
 
-## Projects
-- ### King Minos
-    King Minos is the name of my godot project that's end goal is a city / civilization type game. Where a colony is simulated and the player can help build up the city, its named after the Greek mythological king who colonized the Aegean Sea, the game theme is not neccessarily ancient Greece. So far the project is my opportunity to learn about the Godot game engine and I currently am working on a time management system (chronos) and some basic game asset creations. 
+## Commit Log
 
     ```plaintext
         f498dfc - Brimmstone127, 2024-05-07 : Update time scale adjustment in main.gd
