@@ -18,6 +18,14 @@ tags: ["programming", "blog", "game dev", "godot"]
 
 ## Dev Log
 
+#### 2024-03-26
+#### King Minos
+
+<video width="640" height="480" controls>
+  <source src="..\..\..\src\assets\gifs\2024.03.26.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 ---
 
 #### 2024-03-19
@@ -58,6 +66,11 @@ Chronos - Time mangement module
 
 #### 2024-01-19
 Day night animation - godot
+
+<video width="640" height="480" controls>
+  <source src="..\..\..\src\assets\gifs\2024.01.19.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 ## Commit Log
 

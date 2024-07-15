@@ -9,19 +9,13 @@ const pageTitle = "";
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="text-content">
-    <h1>Welcome To The Workshop</h1>
+    <h1>The Workshop</h1>
     <div class="moon-phase-container">
       <h2>Tonight the moon should be a <span id="moon-phase-name"></span>!</h2>
       <img id="moon-phase-image" src="" alt="" />
     </div>
-
-    <p>This is my virtual pet opossum, Spencer</p>
     <Image src={bigSpencer} alt={"Possum Gif"} />
     <p></p>
-    <Greeting
-      client:load
-      messages={["Hej", "Hallo", "Hola", "Habari", "Hi", "Hello"]}
-    />
   </div>
   <script src="/scripts/moonPhase.js" onload="initMoonPhase()"></script>
 </BaseLayout>
